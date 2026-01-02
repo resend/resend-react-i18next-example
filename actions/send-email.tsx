@@ -2,7 +2,7 @@
 
 import { Resend } from 'resend';
 import Pricing from '@/emails/pricing';
-import type { Locale } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n/i18n';
 
 export async function sendEmail(locale: Locale) {
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -11,7 +11,7 @@ export async function sendEmail(locale: Locale) {
     from: 'Acme <onboarding@resend.dev>',
     to: ['delivered@resend.dev'],
     subject: 'Pricing discount',
-    react: <Pricing locale={locale as Locale} />,
+    react: <Pricing locale={locale} />,
   });
 
   if (response.error) {

@@ -1,7 +1,11 @@
 import { notFound } from 'next/navigation';
-import { createIntl } from 'react-intl';
 import { sendEmail } from '@/actions/send-email';
-import { type Locale, messagesPerLocale, validLocales } from '@/lib/i18n';
+import { type Locale, validLocales } from '@/lib/i18n/i18n';
+import { getT } from '@/lib/i18n/get-t';
+
+export function generateStaticParams() {
+  return validLocales.map((locale) => ({ locale }));
+}
 
 export default async function Home({
   params,
@@ -13,10 +17,7 @@ export default async function Home({
     notFound();
   }
 
-  const { formatMessage } = createIntl({
-    messages: messagesPerLocale[locale],
-    locale,
-  });
+  const { t } = await getT('home', locale);
 
   return (
     <>
@@ -26,10 +27,10 @@ export default async function Home({
           await sendEmail(locale);
         }}
       >
-        <button type="submit">{formatMessage({ id: 'home.submit' })}</button>
+        <button type="submit">{t('home.submit')}</button>
       </form>
       <a href={locale === 'en' ? '/pt' : '/en'}>
-        {formatMessage({ id: 'home.switch-language-link' })}
+        {t('home.switch-language-link')}
       </a>
     </>
   );
