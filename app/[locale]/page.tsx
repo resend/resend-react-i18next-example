@@ -27,10 +27,10 @@ export default async function Home({
           await sendEmail(locale);
         }}
       >
-        <button type="submit">{t('home.submit')}</button>
+        <button type="submit">{t('submit')}</button>
       </form>
       <a href={locale === 'en' ? '/pt' : '/en'}>
-        {t('home.switch-language-link')}
+        {t('switch-language-link')}
       </a>
     </>
   );
