@@ -1,12 +1,12 @@
 {
-  "name": "resend-react-intl-example",
+  "name": "resend-react-i18next-example",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
     "email:build": "email build",
     "email:dev": "email dev",
-    "email:export": "email export"
+    "email:export": "email export",
+    "start": "next start"
   },
   "dependencies": {
     "@react-email/components": "1.0.1",
