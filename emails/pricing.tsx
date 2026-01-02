@@ -73,5 +73,5 @@ export async function Pricing({ locale }: PricingProps) {
 export default Pricing;
 
 Pricing.PreviewProps = {
-  locale: 'pt',
+  locale: 'en',
 } satisfies PricingProps;
