@@ -2,8 +2,8 @@
 
 import { Resend } from 'resend';
 import WelcomeEmail from '@/emails/welcome';
-import type { Locale } from '@/i18n/i18n';
 import { getT } from '@/i18n/get-t';
+import type { Locale } from '@/i18n/i18n';
 
 export async function sendEmail(locale: Locale) {
   const resend = new Resend(process.env.RESEND_API_KEY);
