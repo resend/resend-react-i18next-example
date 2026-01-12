@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { sendEmail } from '@/actions/send-email';
-import { type Locale, validLocales } from '@/lib/i18n/i18n';
-import { getT } from '@/lib/i18n/get-t';
+import { type Locale, validLocales } from '@/i18n/i18n';
+import { getT } from '@/i18n/get-t';
 
 export function generateStaticParams() {
   return validLocales.map((locale) => ({ locale }));
