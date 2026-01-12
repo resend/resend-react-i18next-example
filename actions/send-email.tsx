@@ -8,7 +8,7 @@ import { getT } from '@/i18n/get-t';
 export async function sendEmail(locale: Locale) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  const { t } = await getT('welcome', locale);
+  const { t } = await getT('welcome-email', locale);
 
   const response = await resend.emails.send({
     from: 'Acme <onboarding@resend.dev>',
