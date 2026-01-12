@@ -2,7 +2,7 @@ import i18next from 'i18next'
 import resourcesToBackend from 'i18next-resources-to-backend'
 import { initReactI18next } from 'react-i18next/initReactI18next'
 
-export const validLocales = ['en', 'pt'] as const;
+export const validLocales = ['en', 'es', 'pt'] as const;
 export type Locale = (typeof validLocales)[number];
 
 i18next
