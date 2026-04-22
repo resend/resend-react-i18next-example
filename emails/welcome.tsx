@@ -10,7 +10,7 @@ import {
   Section,
   Tailwind,
   Text,
-} from '@react-email/components';
+} from 'react-email';
 import { getT } from '@/i18n/get-t';
 import type { Locale } from '@/i18n/i18n';
 
