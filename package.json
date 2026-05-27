@@ -1,5 +1,6 @@
 {
   "name": "resend-react-i18next-example",
+  "packageManager": "pnpm@11.3.0",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
